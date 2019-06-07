@@ -92,10 +92,10 @@ document.addEventListener('DOMContentLoaded', function() {
 	var elem  = elementsOnPage.item(e);
 	if (elem.hasAttributes()) {
 	    var content = "content:'<" + elem.tagName.toLowerCase();
-	    var tag = elem.tagName
+	    var tag = elem.tagName;
 	    for (var i = elem.attributes.length -1; i>=0; i--) {
-		content += " " + elem.attributes[i].name + "=\"" + elem.attributes[i].value + "\"";
-		tag += "[" + elem.attribute[i].name + "+";
+		content += " " + elem.attributes[i].name + "=\"' attr(" + elem.attributes[i].name + ")'\"";
+		tag += "[" + elem.attributes[i].name + "]";
 	    }
 	    content += ">'";
 	    createCSSSelector(tag + "::before", content);

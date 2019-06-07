@@ -19,4 +19,6 @@ then it checks whether or not the tag has any attributes and then generates
 the tag for those attributes.
 
 The next problem I found was that it would generate tags based on the last
-version of the tag found. In order to fix this I ...
+version of the tag found. In order to fix this I changed it so that it
+generated the css selector tags with [attribute] selectors and the content
+tags using the attr(css function)
